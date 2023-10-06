@@ -30,9 +30,10 @@ library(dplyr)
 ```
 ### Importing datasets
 ```{r datasets importing,message=FALSE}
-daily_activity <- read_csv("/Users/tzuyuchiu/Desktop/Google Data Analystic/case_study/Bellabeat/dataset/fitabase_data/dailyActivity_merged.csv")
-daily_sleep <- read_csv("/Users/tzuyuchiu/Desktop/Google Data Analystic/case_study/Bellabeat/dataset/fitabase_data/sleepDay_merged.csv")
-weight_log <-read_csv("/Users/tzuyuchiu/Desktop/Google Data Analystic/case_study/Bellabeat/dataset/fitabase_data/weightLogInfo_merged.csv")
+daily_activity <- read_csv("/Users/tzuyuchiu/Desktop/Google Data Analystic/case_study/Bellabeat/project/Bellabeat_Case_Study/fitabase_data/dailyActivity_merged.csv")
+daily_sleep <- read_csv("/Users/tzuyuchiu/Desktop/Google Data Analystic/case_study/Bellabeat/project/Bellabeat_Case_Study/fitabase_data/sleepDay_merged.csv")
+weight_log <-read_csv("/Users/tzuyuchiu/Desktop/Google Data Analystic/case_study/Bellabeat/project/Bellabeat_Case_Study/fitabase_data/weightLogInfo_merged.csv")
+
 
 ```
 ### Exploring datasets
