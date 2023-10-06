@@ -101,21 +101,20 @@ weekday_avg
 # Trend between number of steps and distance
 
 ggplot(weekday_avg, aes(x=WeekDay)) +
-  
-  geom_line( aes(y=avg_steps), size=2,group=1, color="blue") + 
-  geom_line( aes(y=avg_distance/0.001), size=2,group=1, color="purple") +
+  geom_line( aes(y=avg_steps), linewidth=2,group=1, color="blue") + 
+  geom_line( aes(y=avg_distance/0.001), linewidth=2,group=1, color="purple") +
     scale_y_continuous(
   # Features of the first axis
     name = "Number of steps",
     # Add a second axis and specify its features
     sec.axis = sec_axis(~.*0.0005, name="Distance (km)"))+ theme_bw() + 
-  labs(title="Fitbit Activity: Number of steps vs. Distance (km)",x="Days")
+    labs(title="Fitbit Activity: Number of steps vs. Distance (km)",x="Days")
 
 # Trend between Total steps and calorie burn
 
 ggplot(weekday_avg, aes(x=WeekDay)) +
-  geom_line( aes(y=avg_steps), size=1.5,group=1, color="blue") + 
-  geom_line( aes(y=avg_calories/0.3), size=1.5,group=1, color="orange") +
+  geom_line( aes(y=avg_steps), linewidth=1.5,group=1, color="blue") + 
+  geom_line( aes(y=avg_calories/0.3), linewidth=1.5,group=1, color="orange") +
   scale_y_continuous(
     # Features of the first axis
     name = "Total Steps",
@@ -171,7 +170,7 @@ barely_move_details <-jointdataset_check1 %>%
 # group by Id and show summary for some columns
 barely_move_details %>% 
   group_by(ActivityDate) %>% 
-  dplyr::select(TotalSteps,Calories,SedentaryActiveDistance,SedentaryMinutes)
+  dplyr::select(ActivityDate,TotalSteps,Calories,SedentaryActiveDistance,SedentaryMinutes)
 
 barely_move_details %>% 
   filter(TotalSteps>5000) %>% 
